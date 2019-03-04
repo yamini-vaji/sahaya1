@@ -1,0 +1,284 @@
+<html>
+<head>
+<title>
+Complaint Page
+</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="nav.css">
+<style title="style.css">
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.button-container form,
+.button-container form div{
+    display: inline;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}
+.ml-auto  {
+      left: auto !important;
+      right: 0px;
+      }    
+.navbar {
+  position:absolute;
+    background-color:rgb(10,0,0);
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .6;
+    width: 100%;
+    display: inline-block;
+
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar a {
+  float:left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus  {
+    background-color:grey;
+}
+form {
+  border: 3px solid black;
+  border-radius: 4px;
+width:90%;
+background-color: white;
+    margin: 0 auto;
+}
+
+.container input[type=text], input[type=date],form textarea,form select
+,input[type=file]{
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width:300px;
+}
+
+.container button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.container button:hover {
+    opacity: 0.8;
+}
+.color_for_text
+{
+  color:#585151;
+}
+
+.container {
+    padding: 16px;
+
+}
+
+.bg
+{
+  background-color:#585151;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+.pos
+{
+position: absolute;
+transform:translate(80%,5%);
+}
+</style>
+
+<body style="margin:0px;" class="bg">
+<!-- Navigation -->
+<div>
+<nav class="navbar" >
+  <a style="float:left;font-weight: bold;" href="#logo" >SaHaYa</a>
+  <a style="float:left" href="home.html" >Home</a>
+  <a style="float:left" href="FAQ.html" >FAQ's</a>
+   <div class="dropdown">
+  
+  <button class="dropbtn" onclick="myFunction()">Our services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="file.html">File a Complaint</a>
+    </div>
+</div>
+  <a class="ml-auto"style="float:right" href="login2.html">Login</a>
+  <a class="ml-auto"style="float:right" href="registration1.html">Sign Up</a>
+</nav>
+</div>
+<div class="pos">
+<h2 style="color:white" align="center">File a Complaint</h2>
+<form align="center" method="post" name="submit-to-google-sheet">
+
+  <div class="container">
+    <label class="color_for_text" for="namev"><b>Name of the Victim</b></label>
+ 
+    <input type="text" placeholder="Enter victim name" name="namev" >
+    <br>
+ <label class="color_for_text" for="state"><b>Select State</b></label>
+    <br>
+    <select name="stateslist" required>
+<option value="">Select State</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+</select>
+<br>
+
+    <label class="color_for_text" for="namea"><b>Name of the Assaulter</b></label>
+
+    <input type="text" placeholder="Enter assaulter's name" name="namea" required>
+    <br>
+
+<label class="color_for_text" for="Datea"><b>Date of the assault</b></label>
+
+    <input type="date"  name="datea" required>
+    <br>
+
+    <label class="color_for_text" for="location"><b>Location of the assault</b></label>
+
+    <select name="location" required>
+  <option value="work place">Work place</option>
+  <option value="locality">Locality</option>
+  <option value="home">Home</option>
+  <option value="public places">Public places</option>
+  <option value="Others">Others</option>
+  </select>
+    <br>
+   
+<label class="color_for_text" for="orgc"><b>Organization Code</b></label>
+ 
+    <input type="text" placeholder="Enter organization code(if any)" name="orgc" >
+    <br>
+
+  <label class="color_for_text" for="deta"><b>Details of assault</b></label>
+
+    <textarea name="deta" rows="6" required placeholder="Explain about the incident"></textarea>
+    <br>
+
+<label class="color_for_text" for="steps"><b>Steps to be taken</b></label>
+ 
+    <textarea name="steps" rows="6" required placeholder="Suggest steps to be taken against assaulter"></textarea>
+    <br>    
+
+    <label class="color_for_text" for="evidence"><b>Upload Evidence</b></label><br>
+
+    <input type="file" name="evidence" multiple>
+    <br>    
+  </div>
+
+  <div class="container" >
+    <button style="background-color:#BD95BB" type="reset" >reset</button>
+    <button style="background-color: green" type="submit" >submit</button>
+  </div>
+</form>
+</div>
+</body>
+<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwyhGkeqgA5NSOHO5-URBAMreVvTVqAGshiISVs3n3Rs--dUz2z/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("form submitted"))
+      .catch(error => alert("form cannot be submimtted.Please re-submit."))
+  })
+
+</script>
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+
+</script>
+</html>

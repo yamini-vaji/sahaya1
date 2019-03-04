@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>FAQ</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<style>
+/*for navbar*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(10,0,0);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.button-container form,
+.button-container form div{
+    display: inline;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus{
+    background-color:grey;
+}
+.navbar {
+  position:absolute;
+    background-color:rgb(10,0,0);
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    opacity: .6;
+    width: 100%;
+}
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.head{
+text-align: center;
+color: white;
+padding-top: 4%;
+}
+body
+{
+font-family: Arial, Helvetica, sans-serif;
+}
+.bg
+{
+  background-color: #585151;
+}
+.div
+{
+  background-color:#e8e3e4;  
+}
+.ans
+{
+  color: #354752;
+}
+</style>
+<body style="margin:0px;" class="bg">
+
+<!-- Navigation -->
+<div>
+<nav class="navbar">
+  <a style="float:left;font-weight:bold;" href="#logo">Sahaya</a>
+  <a style="float:left" href="home.html" >Home</a>
+  <a style="float:left" href="FAQ.html" >FAQ's</a>
+  <div class="dropdown">
+  
+  <button class="dropbtn" onclick="myFunction()">Our services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+    <a href="https://script.google.com/macros/s/AKfycbxemptfgM3IBl2Lz-CZytbas76IbLcnwPZpQ6hyMCnHl6TQS6PP/exec">File a Complaint</a>
+    </div>
+</div>
+  <a class="ml-auto" style="float:right" href="login2.html">Login</a>
+  <a class="ml-auto" style="float:right" href="registration1.html">Sign Up</a>
+</nav>
+</div>
+<div class="head" >
+<h1> Frequently Asked Questions</h1>
+</div>
+  <div class="div">
+<h4 ><b>Q1. Will the complaint register's name will be known to others?</b></h4>
+<h4 class="ans">A. No, victim name will be kept in secret and anonymous.</h4>
+</div>
+<div class="div">
+<h4 >Q2. Will the action be taken immediately?</h4>
+<h4 class="ans">A. Yes, action will be taken immediately against culprit by higher authorities as soon as we analyse the complaint.</h4>
+</div>
+<div class="div">
+<h4 >Q3. Is any protection given to victim?</h4>
+<h4 class="ans">A. Yes, protection will be given to the victim by the authorities which makes them feel secure.</h4>
+</div>
+<div class="div">
+<h4 >Q4. Is any evidence needed to take an action?</h4>
+<h4 class="ans">A. Yes,either one of the evidences like videos,images,recordings.,etc are needed to support your complaint</h4>
+</div>
+<div class="div">
+<h4 >Q5. How long does it take to process victim's complaint?</h4>
+<h4 class="ans">A. It takes about 1-2 days for processing the complaint.</h4>
+</div>
+</body>
+    <script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
+</html>

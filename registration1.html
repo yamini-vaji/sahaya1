@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+Sign Up
+</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="nav.css">
+<style title="style.css">
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.button-container form,
+.button-container form div{
+    display: inline;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+form {
+  border: 3px solid black;
+  border-radius: 4px;
+width:100%;
+background-color: white;
+    margin: 0 auto;
+}
+
+.container input[type=text], input[type=password] ,form select , input[type=email],input[type=tel]{
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width:300px;
+}
+
+.container button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.container button:hover {
+    opacity: 0.8;
+}
+.color_for_text
+{
+  color:#585151;
+}
+
+
+
+.container {
+    padding: 16px;
+
+}
+
+.bg
+{
+  background-color:#585151;
+}
+
+
+.pos
+{
+position: absolute;
+transform:translate(60%,5%);
+}
+</style>
+
+<body style="margin:0px;" class="bg">
+<!-- Navigation -->
+<div>
+<nav class="navbar" >
+  <a style="float:left;font-weight: bold;" href="#logo" >SaHaYa</a>
+  <a style="float:left" href="home.html" >Home</a>
+  <a style="float:left" href="FAQ.html" >FAQ's</a>
+   <div class="dropdown">
+  
+  <button class="dropbtn" onclick="myFunction()">Our services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="https://script.google.com/macros/s/AKfycbxemptfgM3IBl2Lz-CZytbas76IbLcnwPZpQ6hyMCnHl6TQS6PP/exec">File a Complaint</a>
+    </div>
+</div>
+  <a class="ml-auto"style="float:right" href="login2.html">Login</a>
+  <a class="ml-auto"style="float:right" href="registration1.html">Sign Up</a>
+</nav>
+</div>
+<div class="pos">
+<h2 style="color:white" align="center">Sign Up Form</h2>
+<form  name="f" align="center" method="post" action="insert1.php" >
+
+  <div class="container">
+    <label class="color_for_text" for="Reg"><b>Register as</b></label>
+   
+    <select name="reg" required>
+      <option value="individual">Individual</option>
+      <option value="organization">Organization</option>
+    </select>
+    <br>
+
+    <label class="color_for_text" for="Uname"><b>Enter Username/Organization name</b></label>
+    
+    <input type="text" placeholder="Enter Username/Company name(Optional)" name="uname" >
+    <br>
+
+
+    <label class="color_for_text" for="fpsw"><b>Enter Password</b></label>
+   
+    <input id="psw" type="password" placeholder="Enter Password(minimum length is 8)" name="psw"  minlength="8" required  >
+        <br>
+ 
+ <label class="color_for_text" for="frpsw"><b>Re-Enter Password</b></label>
+   
+    <input id="rpsw" type="password" placeholder="Re-enter Password" name="rpsw" required  >
+        <br>
+
+
+    <label class="color_for_text" for="Email"><b>Enter E-mail</b></label>
+       <input type="email" placeholder="Enter e-mail" name="email" required >
+        <br>
+
+        <label class="color_for_text" for="Tel"><b>Enter Phone no</b></label>
+   
+    <input type="tel" placeholder="Enter phone no" name="tel" >
+        <br>
+ 
+<label class="color_for_text" for="Gender"><b>Select Gender</b></label>
+    
+    <select name="gender" required>
+      <option value="male">male</option>
+      <option value="female">female</option>
+      <option value="others">others</option>
+    </select>
+        <br>
+
+    <label class="color_for_text" for="State"><b>Select State</b></label>
+    
+    <select name="stateslist" required>
+<option value="">Select State</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+</select>
+<br>
+<div>
+    <button style="background-color:green" type="submit" name="register" >sign up</button>
+    <button style="background-color:#BD95BB" type="reset" >reset</button>
+</div>
+</form>
+</div>
+</body>
+<script type="text/javascript">
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
+</html>
